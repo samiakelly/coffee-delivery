@@ -52,10 +52,22 @@ export const ItemsSecondary = styled.div`
     margin: 1rem 0;
     gap: 0.75rem;
   }
+`
 
-  span {
-    background: ${props => props.theme['purple-normal']};
-    padding: 8px;
-    border-radius: 50%;
-  }
+const ITEMS_COLORS = {
+  yellowDark: 'yellow-dark',
+  gray: 'base-text',
+  yellow: 'yellow-normal',
+  purple: 'purple-normal'
+} as const
+
+interface ItemsProps {
+  itemsColor: keyof typeof ITEMS_COLORS
+}
+
+export const ItemsSapan = styled.span<ItemsProps>`
+  padding: 8px;
+  border-radius: 50%;
+  background: ${props => props.theme[ITEMS_COLORS[props.itemsColor]]};
+  color: ${props => props.theme.white};
 `

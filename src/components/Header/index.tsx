@@ -9,11 +9,11 @@ export function Header() {
       <img src={logo} alt="Um copo de café com um frase 'Coffe Delivery'" />
       <nav>
         <span>
-          <MapPin size={22} />
+          <MapPin size={22} weight="fill" />
           Fortaleza, CE
         </span>
         <NavLink to="/checkout">
-          <ShoppingCart size={22} />
+          <ShoppingCart size={22} weight="fill" />
         </NavLink>
       </nav>
     </HeaderContainer>
