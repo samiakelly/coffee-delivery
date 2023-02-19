@@ -1,4 +1,6 @@
 import coffe from '../../assets/Imagem.svg'
+import coffeExpresso from '../../assets/coffee-expresso.svg'
+import coffeAmericano from '../../assets/coffee-americano.svg'
 import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
 
 import {
@@ -6,7 +8,13 @@ import {
   HomeContainer,
   Items,
   ItemsSecondary,
-  ItemsSapan
+  ItemsSapan,
+  ListaCoffeContainer,
+  ListaCoffee,
+  CoffeeCard,
+  Buy,
+  Amount,
+  ButtonCart
 } from './styles'
 
 export function Home() {
@@ -58,7 +66,51 @@ export function Home() {
           alt="Um copo de café, com uma frase coffe delivery, e grãos de café"
         ></img>
       </IntroContainer>
-      <section></section>
+      <ListaCoffeContainer>
+        <h2>Nossos cafés</h2>
+        <ListaCoffee>
+          <CoffeeCard>
+            <img src={coffeExpresso}></img>
+            <span>Tradicional</span>
+            <h3>Expresso Tradicional</h3>
+            <p>Café expresso com calda de chocolate, pouco leite e espuma</p>
+            <Buy>
+              <div>
+                <p>R$</p>
+                <h3>9,90</h3>
+              </div>
+              <Amount>
+                <button>-</button>
+                <label>1</label>
+                <button>+</button>
+              </Amount>
+              <ButtonCart>
+                <ShoppingCart size={16} weight="fill" />
+              </ButtonCart>
+            </Buy>
+          </CoffeeCard>
+          <CoffeeCard>
+            <img src={coffeAmericano}></img>
+            <span>Tradicional</span>
+            <h3>Expresso Americano</h3>
+            <p>Expresso diluído, menos intenso que o tradicional</p>
+            <Buy>
+              <div>
+                <p>R$</p>
+                <h3>9,90</h3>
+              </div>
+              <Amount>
+                <button>-</button>
+                <label>1</label>
+                <button>+</button>
+              </Amount>
+              <ButtonCart>
+                <ShoppingCart size={16} weight="fill" />
+              </ButtonCart>
+            </Buy>
+          </CoffeeCard>
+        </ListaCoffee>
+      </ListaCoffeContainer>
     </HomeContainer>
   )
 }
