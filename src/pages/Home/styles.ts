@@ -7,6 +7,7 @@ export const HomeContainer = styled.main`
   flex-direction: column;
 `
 export const IntroContainer = styled.section`
+  margin-top: 4.875rem;
   flex: 1;
   display: flex;
 
@@ -77,11 +78,14 @@ export const ListaCoffeContainer = styled.section`
   }
 `
 export const ListaCoffee = styled.div`
-  margin: 4rem 0;
+  width: 70rem;
   display: flex;
+  flex-wrap: wrap;
+  margin: 4rem 0;
   gap: 2rem;
 `
 export const CoffeeCard = styled.div`
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -185,4 +189,9 @@ export const ButtonCart = styled.button`
   border-radius: 6px;
   padding: 8px;
   cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: ${props => props.theme['purple-normal']};
+  }
 `
